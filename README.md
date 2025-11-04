@@ -18,17 +18,11 @@ Code repository for the paper:
 ## Installation
 First you need to clone the repo:
 ```
-git clone --recursive https://github.com/geopavlakos/hamer.git
+git clone --recursive https://github.com/Arthur151/hamer.git
 cd hamer
 ```
 
-We recommend creating a virtual environment for HaMeR. You can use venv:
-```bash
-python3.10 -m venv .hamer
-source .hamer/bin/activate
-```
-
-or alternatively conda:
+Create a virtual environment for HaMeR via conda:
 ```bash
 conda create --name hamer python=3.10
 conda activate hamer
@@ -36,9 +30,10 @@ conda activate hamer
 
 Then, you can install the rest of the dependencies. This is for CUDA 11.7, but you can adapt accordingly:
 ```bash
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu117
+# replace with the cuda version you use
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 pip install -e .[all]
-pip install -v -e third-party/ViTPose
+pip install -v -e ViTPose
 ```
 
 You also need to download the trained models:

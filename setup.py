@@ -21,7 +21,7 @@ setup(
         'mmcv==1.3.9',
         'timm',
         'einops',
-        'xtcocotools',
+        #'xtcocotools',
         'pandas',
     ],
     extras_require={
