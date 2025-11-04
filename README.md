@@ -18,7 +18,7 @@ Code repository for the paper:
 ## Installation
 First you need to clone the repo:
 ```
-git clone --recursive https://github.com/Arthur151/hamer.git
+git clone https://github.com/Arthur151/hamer.git
 cd hamer
 ```
 
@@ -39,24 +39,8 @@ pip install -v -e ViTPose
 You also need to download the trained models:
 ```bash
 bash fetch_demo_data.sh
+cp /home/yu/data/afv_data/smpl_model_data/mano/MANO_RIGHT.pkl _DATA/data/mano/
 ```
-
-Besides these files, you also need to download the MANO model. Please visit the [MANO website](https://mano.is.tue.mpg.de) and register to get access to the downloads section.  We only require the right hand model. You need to put `MANO_RIGHT.pkl` under the `_DATA/data/mano` folder.
-
-### Docker Compose
-
-If you wish to use HaMeR with Docker, you can use the following command:
-
-```
-docker compose -f ./docker/docker-compose.yml up -d
-```
-
-After the image is built successfully, enter the container and run the steps as above:
-
-```
-docker compose -f ./docker/docker-compose.yml exec hamer-dev /bin/bash
-```
-
 Continue with the installation steps:
 
 ```bash
@@ -69,6 +53,8 @@ python demo.py \
     --img_folder example_data --out_folder demo_out \
     --batch_size=48 --side_view --save_mesh --full_frame
 ```
+
+
 
 ## HInt Dataset
 We have released the annotations for the HInt dataset. Please follow the instructions [here](https://github.com/ddshan/hint)

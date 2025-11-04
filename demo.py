@@ -34,7 +34,7 @@ def main():
     args = parser.parse_args()
 
     # Download and load checkpoints
-    download_models(CACHE_DIR_HAMER)
+    #download_models(CACHE_DIR_HAMER)
     model, model_cfg = load_hamer(args.checkpoint)
 
     # Setup HaMeR model
