@@ -42,9 +42,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install gdown
 
 # Install third-party dependencies ViTPose:
-COPY third-party/ third-party/
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install -v -e third-party/ViTPose
+    pip install -v -e ViTPose
 
 # Install project dependencies:
 COPY . .
